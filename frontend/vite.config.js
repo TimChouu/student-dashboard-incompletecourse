@@ -5,7 +5,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/student-dashboard-completecourse/', 
+  base: '/student-dashboard-incompletecourse/', 
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)), // ← 這行是重點
