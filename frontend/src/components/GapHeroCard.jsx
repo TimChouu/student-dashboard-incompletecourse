@@ -213,9 +213,6 @@ export default function GapHeroCard({
       <div className="grid gap-8 md:grid-cols-12 items-center">
         {/* 左側：標題 + 主訊息 + 數值 Pill + CTA */}
         <div className="md:col-span-7 lg:col-span-7 text-gray-900">
-          <p className="text-sm md:text-base font-semibold text-gray-700">
-            {isComplete ? <>升級完成（達 {band.code}）</> : <>升級進度（往 {band.code}）</>}
-          </p>
 
           <h2 className="mt-1 text-3xl md:text-4xl font-black tracking-tight">
             {isComplete ? <>目標達成 {band.code}</> : <>目標 {band.code}</>}
@@ -224,7 +221,7 @@ export default function GapHeroCard({
           {isComplete ? (
             <p className="mt-3 text-lg md:text-xl leading-relaxed">
               <span className="font-extrabold" style={{ color: ACCENT }}>恭喜你達成時數！</span>{" "}
-              接下來就用「最終考驗」來測試你的真正實力吧！
+              接下來就用「升級考驗」來測試你的真正實力吧！
             </p>
           ) : (
             <p className="mt-3 text-lg md:text-xl leading-relaxed">
@@ -236,7 +233,7 @@ export default function GapHeroCard({
                 </span>{pointsUnit}（{Math.round(percent)}%），再累積{" "}
                 <span className="font-extrabold" style={{ color: ACCENT }}>
                   {fmt(remain)}
-                </span>{pointsUnit} 就能準備升級！
+                </span>{pointsUnit}，就能解鎖升級挑戰囉!
             </p>
           )}
 
@@ -256,7 +253,7 @@ export default function GapHeroCard({
               立刻衝刺！！
             </button>
             )}
-            {/* 進入最終考驗 */}
+            {/* 進入升級考驗 */}
             <button
               onClick={isUnlocked ? onGoExam : undefined}
               disabled={!isUnlocked}
@@ -281,7 +278,7 @@ export default function GapHeroCard({
             ) : (
               <Lock className="size-5" />
             )}
-            進入最終考驗！
+            進入升級考驗！
             </button>
 
           </div>
